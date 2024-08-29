@@ -1,0 +1,68 @@
+.address-map-container {
+  padding: 0;
+  margin: 0;
+
+  .address-form {
+    background: transparent;
+
+    padding: 0;
+    .form-control {
+      border: none;
+      font-size: 14px;
+    }
+    .address-container {
+    }
+    .map-container {
+      padding: 14px;
+    
+      .address-info{
+        h2{
+          color: rgb(255, 251, 30);
+          font-size: 20px;
+          font-weight: 900;
+         
+        }
+        .address-para{
+          padding-top: 10px;
+          overflow-wrap: break-word;
+          text-align: center;
+          font-size: 14px;
+        }
+        
+        backdrop-filter: blur(3px);
+        background: rgba(255, 255, 255, 0.207);
+        height:250px;
+        width: 100%;
+        padding-left: 0;
+        padding: 4px;
+      }
+      .map-box{
+        margin-left: 10px;
+       
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px){
+  .address-map-container .address-form 
+  .address-container{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  
+  .map-container{
+    padding-top: 0 !important;
+  } .address-info {
+    height:120px !important;
+    min-height: 120px;
+  }
+}
+
+@media screen and (max-width:400px){
+  .address-map-container .address-form 
+   .address-info {
+    height:170px !important;
+    min-height: 170px;
+  }
+}

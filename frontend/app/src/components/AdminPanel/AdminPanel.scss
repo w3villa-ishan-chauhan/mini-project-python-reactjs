@@ -1,0 +1,151 @@
+.admin-container {
+  background-color: lightblue;
+  .admin-heading-image {
+    height: 100px !important;
+    width: 150px !important;
+    border-radius: 100%;
+    margin: 20px 0;
+  }
+  .filter-section {
+    label {
+      font-size: 18px;
+      font-weight: 600;
+      margin-right: 12px;
+    }
+    input {
+      font-size: 14px;
+      border-radius: 8px;
+      padding: 7px;
+      border: none;
+      input:focus {
+        border: none;
+      }
+    }
+
+    select {
+      font-size: 14px;
+      padding: 7px;
+      border-radius: 8px;
+      border: none;
+
+      &:target {
+        border: none;
+      }
+    }
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  thead tr {
+    background-color: #4caf50;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  tbody tr:last-of-type {
+    border-bottom: 2px solid #4caf50;
+  }
+
+  tbody td:first-of-type {
+    font-weight: bold;
+  }
+
+  tbody tr.selected {
+    background-color: #d3d3d3;
+  }
+  .plan-upgrade {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    p {
+      padding-top: 4px;
+      color: rgb(170, 117, 20) !important;
+    }
+    select {
+      border: none;
+      font-size: 14px;
+      border-radius: 6px;
+      width: 80px;
+      height: 40px;
+      padding: 0px 10px;
+      background-color: rgb(227, 216, 216);
+    }
+    .subscription-button {
+      margin-left: 3px;
+      height: 40px;
+      width: 80px;
+    }
+  }
+  .logout-button{
+    text-align: center;
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .admin-container {
+    .table-container {
+      word-wrap: break-word;
+      th,
+      td {
+        padding: 5px;
+        font-size: 12px;
+      }
+      select {
+        margin: 10px;
+        padding: 0 !important;
+        height: 30px !important;
+        width: 50px !important;
+        font-size: 12px;
+        
+      }
+    }
+    .plan-upgrade {
+      button {
+        margin: 10px;
+        padding: 0 !important;
+        height: 30px !important;
+        width: 50px !important;
+      }
+      .subscription-button {
+        margin-left: 0px;
+
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .admin-container {
+    .table-container {
+      
+      select {
+        margin-left: 0px;
+        
+      }}}}

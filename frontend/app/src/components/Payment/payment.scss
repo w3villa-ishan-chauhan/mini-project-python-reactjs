@@ -1,0 +1,29 @@
+.payment-form {
+  padding-top: 10px !important;
+
+  height: 100px;
+
+  button {
+    margin-top: 50px;
+
+    height: 45px;
+    width: 90px;
+  }
+  label{
+    font-size: 17px;
+  }
+  .payment-amount-left {
+    text-align: left;
+  }
+  .payment-amount-right {
+    text-align: right;
+  }
+  input {
+    margin: 0 8px;
+  }
+}
+@media screen and (max-width: 480px) {
+ label{
+  font-size: 15px ;
+ }
+}
