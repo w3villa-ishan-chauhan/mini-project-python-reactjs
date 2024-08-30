@@ -11,10 +11,11 @@ const DownloadProfile = (userData) => {
 
     // Add user data
     doc.setFontSize(12);
-
+    doc.text(`Name: ${userData.name}`, 10, 30);
     doc.text(`Email: ${userData.email}`, 10, 40);
     doc.text(`Contact: ${userData.contact}`, 10, 50);
     doc.text(`Address: ${userData.residing_address}`, 10, 60);
+    doc.text(`Address: ${userData.subscription_type}`, 10, 70);
 
     // Add more data as needed
 
