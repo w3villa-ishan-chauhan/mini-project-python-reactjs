@@ -23,6 +23,9 @@ This project is a comprehensive web application that combines FastAPI for the ba
 **Dashboard Panel-Screenshot**
 ![Screenshot from 2024-08-30 13-14-51](https://github.com/user-attachments/assets/4ca870c3-644f-43a4-beb1-60e3fd59ed3c)
 
+**Responsive-UI**
+![Screenshot from 2024-08-30 17-13-12](https://github.com/user-attachments/assets/808bc9b7-7ec8-4d50-8b15-ba1156fbcdc2)
+
 
 - **Profile Management:**
   - **Profile Picture Upload:** Silver Plan users can upload and view their profile picture and Base users get a predefined profile pic template.
