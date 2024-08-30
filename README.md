@@ -70,3 +70,16 @@ This project is a comprehensive web application that combines FastAPI for the ba
 - **Database and ORM:** Mysql and Sqlalchemy
 
 
+## This project involves services like twilio, mapbox and stripe which involves use of api keys so required api_keys names are :
+//MAPBOX KEYS
+MAP_BOX_KEY
+
+//STRIPE KEYS
+STRIPE_PUBLIC_KEY
+STRIPE_SECRET_KEY
+
+//TWILIO KEYS 
+ACCOUNT_SID
+AUTH_TOKEN
+TWILIO_SERVICE_ID
+TWILIO_EMAIL_SERVICE_ID
