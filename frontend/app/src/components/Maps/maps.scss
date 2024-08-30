@@ -11,58 +11,135 @@
       font-size: 14px;
     }
     .address-container {
+      position: relative;
+      margin: 20px 6px;
+      .enter-address {
+        position: absolute;
+        left: 0px;
+        z-index: 1;
+      }
+      .house-number {
+        position: absolute;
+        left: 25%;
+      }
+      .pin-code {
+        position: absolute;
+        left: 50%;
+      }
     }
     .map-container {
       padding: 14px;
-    
-      .address-info{
-        h2{
+
+      .address-info {
+        border-radius: 8px;
+
+        h2 {
           color: rgb(255, 251, 30);
           font-size: 20px;
           font-weight: 900;
-         
+          padding-top: 8px;
         }
-        .address-para{
+        .address-para {
           padding-top: 10px;
           overflow-wrap: break-word;
           text-align: center;
           font-size: 14px;
         }
-        
+
         backdrop-filter: blur(3px);
         background: rgba(255, 255, 255, 0.207);
-        height:250px;
+        height: 250px;
         width: 100%;
         padding-left: 0;
         padding: 4px;
       }
-      .map-box{
+      .map-box {
+        border-radius: 8px !important;
+
         margin-left: 10px;
-       
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .address-map-container {
+    .address-form {
+      .address-container {
+        margin-bottom: 24px;
+        .enter-address {
+          left: 0%;
+        }
+        .house-number {
+          left: 33.3%;
+        }
+        .pin-code {
+          left: 66.6%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 769px) {
+  .address-map-container {
+    .address-form {
+      .address-container {
+        margin-bottom: 58px;
+      }
+      .map-container {
+        .address-info {
+          max-height: 250px;
+        }
       }
     }
   }
 }
 
-@media screen and (max-width:768px){
-  .address-map-container .address-form 
-  .address-container{
+@media screen and (max-width: 768px) {
+  .address-map-container .address-form .address-container {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
   }
-  
-  .map-container{
+
+  .map-container {
     padding-top: 0 !important;
-  } .address-info {
-    height:120px !important;
+  }
+  .address-info {
+    height: 120px !important;
     min-height: 120px;
   }
 }
+@media screen and (max-width: 576px) {
+  .address-map-container {
+    .address-form {
+      .address-container {
+        height: 100px;
+        .enter-address {
+          left: 0%;
+          top: 0%;
+        }
 
-@media screen and (max-width:400px){
-  .address-map-container .address-form 
-   .address-info {
-    height:170px !important;
+        .house-number {
+          left: 0%;
+          top: 50%;
+        }
+
+        .pin-code {
+          left: 0%;
+          top: 100%;
+        }
+      }
+      .map-container{
+        .address-info{
+          min-height: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .address-map-container .address-form .address-info {
+    height: 170px !important;
     min-height: 170px;
   }
 }

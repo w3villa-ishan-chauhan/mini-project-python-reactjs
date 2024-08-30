@@ -11,6 +11,7 @@ import { googleLoginHandler } from '../../api/api';
 
 function App() {
     const [formData, setFormData] = useState({
+        name:'',
         email: '',
         contact: '',
         password: '',
@@ -20,10 +21,8 @@ function App() {
     const { setContact, setEmail, login } = useAuth();
     const handleChange = (e) => {
         e.preventDefault();
-
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-
     }
 
     const handleSubmit = async (e) => {
@@ -36,14 +35,14 @@ function App() {
         //api integration
         try {
             const response = await sendData(formData);
-            console.log("response_signup",response)
+            console.log("response_signup", response)
             if (response.status_code === 200) {
                 setContact(formData.contact)
                 setEmail(formData.email)
                 toast.success("Verify With OTP")
                 navigate('./otp');
             }
-            else{
+            else {
                 toast.error("Signup failed")
             }
         }
@@ -56,8 +55,8 @@ function App() {
         try {
             const { credential } = response;
             if (!credential) throw new Error("Google credential not received");
-                       
-            const result = await googleLoginHandler({ credential });            
+
+            const result = await googleLoginHandler({ credential });
             login(result.data.access_token);
             if (result.status === 200) {
                 console.log(result.status)
@@ -75,7 +74,10 @@ function App() {
                 <div className="wrapper">
                     <form onSubmit={handleSubmit}>
                         <h2>Signup</h2>
-
+                        <div className="input-field">
+                            <input type="text" name="name" id="name" onChange={handleChange} value={formData.name} required />
+                            <label htmlFor="name">Name</label>
+                        </div>
                         <div className="input-field">
                             <input type="text" id="email" name="email" onChange={handleChange} value={formData.email} required />
                             <label htmlFor="email">Enter your email</label>

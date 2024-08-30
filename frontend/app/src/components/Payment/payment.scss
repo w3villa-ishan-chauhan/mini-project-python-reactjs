@@ -9,7 +9,7 @@
     height: 45px;
     width: 90px;
   }
-  label{
+  label {
     font-size: 17px;
   }
   .payment-amount-left {
@@ -22,8 +22,25 @@
     margin: 0 8px;
   }
 }
+@media screen and (max-width: 768px) {
+  .payment-container {
+    margin-top: 10px;
+    .payment-section {
+      padding-top: 0px !important;
+    }
+  }
+}
 @media screen and (max-width: 480px) {
- label{
-  font-size: 15px ;
- }
+  label {
+    font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .payment-container {
+    margin-top: 10px;
+
+    label {
+      font-size: 11px !important;
+    }
+  }
 }

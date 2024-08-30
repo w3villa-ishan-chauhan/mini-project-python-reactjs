@@ -61,8 +61,8 @@ def google_login(request: GoogleLoginRequest, db: Session = Depends(getDb)):
     try:
         google_user_info = user_controller.verify_google_token(request.credential)
         email = google_user_info.get("email")
-        print("email", email)
-
+        user_name=google_user_info.get("name")
+    
         if not email:
             raise HTTPException(status_code=400, detail="Google token is invalid")
         dbUser = auth.getUser(db, email)
@@ -70,6 +70,7 @@ def google_login(request: GoogleLoginRequest, db: Session = Depends(getDb)):
         # print("dbUser before", dbUser.contact)
         if dbUser is None:
             dbUser = userSchema(
+                name=user_name,
                 email=email,
                 contact="n/A",
                 hash_password="n/A",

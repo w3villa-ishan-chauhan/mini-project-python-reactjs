@@ -51,11 +51,11 @@ function App() {
                     <div id="otpSection" >
                         <div class="input-field">
                             <input type="text" id="otp" name="otp" value={formData.otp} onChange={handleOtp} required />
-                            <label for="otp">Enter OTP</label>
+                            <label for="otp">Enter Mob OTP</label>
                         </div>
                         <div class="input-field">
                             <input type="text" id="email_otp" name="email_otp" value={formData.emaill_otp} onChange={handleOtp} required />
-                            <label for="email_otp">Enter OTP</label>
+                            <label for="email_otp" style={{top:"10px"}}>Enter Email OTP</label>
                         </div>
                         <button type="submit" id="verifyOTP" >Verify OTP</button>
                     </div>

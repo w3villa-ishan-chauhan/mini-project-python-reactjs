@@ -8,7 +8,7 @@ import { toast } from 'react-toastify';
 import { useAuth } from '../../context/authcontext';
 import { update_address } from "../../api/api";
 import { get_user_details } from "../../api/api";
-const mapbox_access_token = process.env.REACT_APP_MAP_BOX_KEY;
+const mapbox_access_token = process.env.REACT_APP_MAP_BOX_KEY
 
 const Map = ReactMapboxGl({
   accessToken: mapbox_access_token
@@ -108,7 +108,7 @@ const MapComponent = () => {
     <div className="container-fluid address-map-container">
       <form action="" onSubmit={handleSubmit} className="address-form">
         <div className="row address-container p-3">
-          <div className='col-lg-3 col-sm-4 col-12'>
+          <div className='enter-address col-lg-3 col-sm-4 col-12'>
             <input
               type="text"
               className='form-control'
@@ -128,10 +128,10 @@ const MapComponent = () => {
               ))}
             </ul>
           </div>
-          <div className="col-lg-3 col-sm-4 col-12">
+          <div className="house-number col-lg-3 col-sm-4 col-12">
             <input className='form-control' placeholder='House Number' type='text' name="houseNumber" value={formData.houseNumber} onChange={handleChange}></input>
           </div>
-          <div className="col-lg-3 col-sm-4 col-12">
+          <div className="pin-code col-lg-3 col-sm-4 col-12">
             <input className='form-control' placeholder='Pincode' type='text' name="zip" value={formData.zip} onChange={handleChange}></input>
 
           </div>
@@ -160,7 +160,7 @@ const MapComponent = () => {
               containerStyle={{
                 height: '250px',
                 width: '100%',
-                border: '2px solid red'
+                borderRadius:"8px"
               }}
               center={coordinates}
             >

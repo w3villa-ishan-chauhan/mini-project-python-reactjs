@@ -144,12 +144,15 @@ home::before {
   80%,
   100% {
     transform: translateY(0);
+   
   }
   40% {
     transform: translateY(-10px);
+   
   }
   60% {
     transform: translateY(-5px);
+    
   }
 }
 .middlebar {
@@ -241,6 +244,18 @@ home::before {
 
 .row-top {
   height: 50%;
+  .profileImage-disable {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    cursor: not-allowed !important;
+    input {
+      pointer-events: none;
+    }
+    button {
+      pointer-events: none;
+    }
+  }
+  
 }
 
 .row-bottom {
@@ -522,6 +537,11 @@ button i {
     height: 200px;
     margin-left: 0;
     padding-left: 2rem;
+    .intro {
+      p {
+        font-size: 14px;
+      }
+    }
   }
 
   .profile-column {
@@ -596,6 +616,11 @@ button i {
 }
 
 @media screen and (max-width: 700px) {
+  .intro {
+    p {
+      font-size: 11px !important;
+    }
+  }
   .filter-button {
     display: none;
     padding: 0;
@@ -671,10 +696,15 @@ button i {
 }
 
 @media screen and (max-width: 460px) {
+  .intro {
+    p {
+      font-size: 8.5px !important;
+    }
+  }
   .slide .responsive-container {
     width: 76%;
   }
-  
+
   .form-control {
     font-size: 10px;
   }

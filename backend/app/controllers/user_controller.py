@@ -54,6 +54,7 @@ def signup(user: User, db: Session = Depends(getDb)):
     hashed_password = auth.getPasswordHash(user.password)
 
     temp_user_data = {
+        "name":user.name,
         "email": user.email,
         "contact": user.contact,
         "hash_password": hashed_password,
@@ -91,6 +92,7 @@ def saveVerifiedUser(db: Session = Depends(getDb)):
     print("temp_store", temp_store)
 
     db_user = userSchema(
+        name=temp_store["name"],
         email=temp_store["email"],
         hash_password=temp_store["hash_password"],
         contact=temp_store["contact"],

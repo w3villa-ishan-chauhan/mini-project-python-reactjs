@@ -73,13 +73,17 @@ function HomePage() {
                                             {loading ? (
                                                 <p>Loading...</p>
                                             ) : (
-                                                <img src={`${authState.user.data.profile_image ? authState.user.data.profile_image : "https://as2.ftcdn.net/v2/jpg/01/97/15/87/1000_F_197158744_1NBB1dEAHV2j9xETSUClYqZo7SEadToU.jpg"}`}></img>
+                                                <img style={{objectFit:"cover"}} src={`${authState.user.data.profile_image ? authState.user.data.profile_image : "https://as2.ftcdn.net/v2/jpg/01/97/15/87/1000_F_197158744_1NBB1dEAHV2j9xETSUClYqZo7SEadToU.jpg"}`}></img>
                                             )}
                                         </div>
-                                        {profileImageUrl &&
-                                            <div className="profileImage">
+                                        {profileImageUrl && authState.user.data.subscription_type != 'Base' ?
+                                            (<div className="profileImage" >
                                                 <ProfileImage />
-                                            </div>}
+                                            </div>) :
+                                            (<div className="profileImage-disable" onMouseEnter={() => { toast.error("Upgrade your plan to Silver") }}>
+                                                <ProfileImage />
+                                            </div>)
+                                        }
                                     </div>
                                 </div>
 
@@ -154,10 +158,17 @@ function HomePage() {
                                                 <p>Loading...</p> // Fixed the closing tag
                                             ) : (
                                                 <div>
-                                                    <p className="h6">Hello, {authState.user.data.email}</p>
+                                                    <p className="h6">Hello, {authState.user.data.name}</p>
+                                                    <p className="h6">Your email, {authState.user.data.email}</p>
                                                     <p className="small-grey text-warning">Active plan : {authState.user.data.subscription_type}</p>
                                                 </div>
                                             )}
+                                        </div>
+                                        <div className="intro">
+                                            <p>
+                                                <i>This project offers a comprehensive user management system with seamless social and standard signup options. It includes features for account verification, profile management, and secure payment processing. Admins can efficiently oversee users and access controls through an advanced admin panel.</i>
+                                            </p>
+
                                         </div>
 
                                     </div>

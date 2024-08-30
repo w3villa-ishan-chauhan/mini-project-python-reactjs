@@ -4,6 +4,7 @@ import { useAuth } from '../../context/authcontext';
 import { toast } from 'react-toastify';
 import "./profileImage.scss"
 import { set_profile } from "../../api/api"
+import { HiUpload } from "react-icons/hi";
 
 const ProfileUpload = () => {
   const [file, setFile] = useState(null);
@@ -42,7 +43,8 @@ const ProfileUpload = () => {
   return (
     <div className='profile-picture'>
       <input type="file" accept="image/*" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
+      <button onClick={handleUpload}><HiUpload />
+      </button>
     </div>
   );
 };

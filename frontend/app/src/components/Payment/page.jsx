@@ -3,6 +3,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { payment_intent } from "../../api/api";
 import { useAuth } from '../../context/authcontext';
 import "./payment.scss"
+import { toast } from 'react-toastify';
 import { use } from 'bcrypt/promises';
 
 const Payment = () => {
@@ -47,6 +48,7 @@ const Payment = () => {
             setError(null);
             setProcessing(false);
             setSucceeded(true);
+            toast.success("Payment successful !")
             // Upgrade user access level here or handle in webhook
         }
         window.location.reload()

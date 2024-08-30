@@ -130,12 +130,14 @@ const UserList = () => {
                     </select>
                 </div>
             </div>
-            <div className="table-container">
+            <div className="table-container " style={{overflowX:"auto"}}>
                 <table>
                     <thead>
                         <tr>
-                            <th>S.no</th>
+                            <th >S.no</th>
+                            <th >Name</th>
                             <th>Email</th>
+                            <th >Address</th>
                             <th>Role</th>
                             <th>Subscription</th>
                         </tr>
@@ -144,13 +146,15 @@ const UserList = () => {
                         {users.map((user, i) => (
                             <tr key={user.id}>
                                 <td>{i + 1}</td>
+                                <td>{user.name}</td>
                                 <td>{user.email}</td>
+                                <td>{user.residing_address}</td>
                                 <td>{user.role}</td>
-                                <td>{user.subscription_type}
-                                    {user.role === '' &&
+                                <td >{user.subscription_type}
+                                    {user.role ==='user' &&
 
                                         <div className="plan-upgrade">
-                                            <p>Upgrade user plan</p>
+                                            <p>Upgrade user plan:{user.subscription_type }</p>
 
                                             {user.subscription_type == 'Base' && (
                                                 <>

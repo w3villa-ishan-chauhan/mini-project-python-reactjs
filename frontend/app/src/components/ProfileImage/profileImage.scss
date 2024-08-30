@@ -1,16 +1,24 @@
-.profile-picture{
-   
-    margin-left: 0px;
-    z-index: 100;
-    
-    input{
-        font-size: 8px;
-        width: 100%;
+.profile-picture {
+  margin-left: 0px;
+  z-index: 100;
 
+  input {
+    font-size: 8px;
+    width: 100%;
+    margin-left: 2px;
+  }
+  button {
+    padding: 2px 18px;
+    font-size: 15.5px;
+    border: 2px solid #28a745;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: #218838;
     }
-    button{
-        padding: 0;
-        font-size: 15.5px;
-        
-    }
+  }
+  
 }
