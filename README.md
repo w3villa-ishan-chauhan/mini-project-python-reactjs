@@ -6,7 +6,7 @@ This project is a comprehensive web application that combines FastAPI for the ba
 ## Features
 
 **Signup, Login and OTP-Screenshot**
-![1](https://github.com/user-attachments/assets/4027360f-8be5-424e-b127-d9948c2c4c97)
+![1725018477423](https://github.com/user-attachments/assets/6cefceb0-6eeb-43b2-8707-896260f1d0ed)
 
 
 **Email and Text OTP-Screenshot**
